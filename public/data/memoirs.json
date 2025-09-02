@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "Sample Memoir",
+    "a": "2c4a3c8b-8a6c-4a2f-9d8f-111111111111",
+    "b": { "a": "Cole", "b": "Sample Memoir", "c": "# Sample Memoir\n\nThis is **markdown** content for a sample memoir.", "d": ["memoir", "travel"] },
+    "c": "[\"memoir\",\"travel\"]",
+    "d": [ { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/HomeLandingImage.svg" } ],
+    "e": { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/HomeLandingImage.svg" },
+    "f": "2025-01-01T00:00:00.000Z",
+    "g": "2025-01-02T00:00:00.000Z",
+    "h": "A short summary of the memoir."
+  },
+  {
+    "_id": "Another Memoir",
+    "a": "7b1f0d44-2f3e-4d5a-8c2e-222222222222",
+    "b": { "a": "Alex", "b": "Another Memoir", "c": "# Another Memoir\n\nMore _markdown_ with details and images.", "d": ["memoir", "tips"] },
+    "c": "[\"memoir\",\"tips\"]",
+    "d": [ { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/Tourism.svg" } ],
+    "e": { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/Tourism.svg" },
+    "f": "2025-01-05T00:00:00.000Z",
+    "h": "Another summary for preview cards."
+  }
+]

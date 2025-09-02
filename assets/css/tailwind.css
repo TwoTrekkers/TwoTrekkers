@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #ff385c;
+  --color-primary-hover: #e03150;
+  --color-secondary: #007bff;
+  --color-secondary-hover: #0056b3;
+  --color-background: #323232;
+  --color-background-dark: #161616;
+  --color-background-darker: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-muted: #94a3b8;
+  --color-text-secondary: #b0b0b0;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: rgba(255, 255, 255, 0.2);
+}
+
+html, body, #__nuxt { height: 100%; }
+
+body { @apply bg-background-dark text-text font-sans antialiased; }
+
+@layer components {
+  /* App-wide button normalization */
+  a.trekker-btn, button.trekker-btn, .trekker-btn { @apply inline-block px-6 py-3 rounded-[24px] bg-primary text-white hover:bg-primary-hover transition shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-dark; }
+  a.trekker-btn-outline, button.trekker-btn-outline, .trekker-btn-outline { @apply inline-block px-6 py-3 rounded-[24px] border border-border-light text-white hover:border-white/40 hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-dark; }
+  .section { @apply py-16; }
+  .section-muted { @apply bg-background py-16; }
+  .muted { @apply text-text-muted; }
+  .shadow-card { box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.1); }
+  .card { @apply rounded-2xl border border-[var(--color-border)] bg-background shadow-md; }
+  .card-hover { @apply transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg; }
+  .category-tag { @apply inline-block rounded-full text-xs font-semibold px-3 py-1 text-white; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%); }
+  .read-more { @apply text-primary font-semibold inline-flex items-center gap-1; }
+  .read-more:hover { @apply text-secondary translate-x-[2px]; }
+  .container-wide { @apply w-full md:w-4/5 mx-auto; }
+  .eyebrow { @apply uppercase text-text-muted font-semibold tracking-[1px] text-[14px] leading-[19px] md:text-[16px] md:leading-[21px]; }
+  .text-large { @apply text-[52px] leading-[68px] font-semibold text-text; }
+  .text-medium { @apply text-[42px] leading-[52px] font-semibold text-text; }
+  .text-small { @apply text-[24px] leading-[31px] text-text; }
+  .flex-container { @apply flex flex-col md:flex-row items-center gap-10 w-4/5 mx-auto py-12; }
+}
+
+/* App-wide base typography for raw elements */
+@layer base {
+  h1 { @apply text-large; }
+  h2 { @apply text-medium; }
+  p { @apply text-small; }
+}
+
+/* Utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+

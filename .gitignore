@@ -1,0 +1,69 @@
+# --- OS & Editor ---
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon?
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Environment files ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Node/Nuxt/Vite ---
+node_modules/
+.npm/
+.pnp/
+.pnp.js
+.nuxt/
+.nitro/
+.output/
+.data/
+.dist/
+dist/
+.vite/
+.cache/
+.eslintcache
+.stylelintcache
+coverage/
+.nyc_output/
+.vercel/
+
+# --- Lockfiles to keep (do NOT ignore) ---
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# --- Images/asset tooling (scratch dirs) ---
+.tmp/
+.temp/
+
+# --- Docker/containers ---
+*.pid
+
+# --- Swift/Vapor (server subproject) ---
+/two-trekkers/.build/
+/two-trekkers/Packages/
+/two-trekkers/.swiftpm/
+/two-trekkers/DerivedData/
+/two-trekkers/*.xcodeproj/
+/two-trekkers/*.xcworkspace/
+/two-trekkers/**/xcuserdata/
+/two-trekkers/.vscode/
+
+# --- Misc ---
+.fleet/
+.idea/
+*.local
