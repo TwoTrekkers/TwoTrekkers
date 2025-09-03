@@ -110,7 +110,6 @@ const { t, locale } = useI18n()
 const site = 'https://twotrekkers.travel'
 const fallback = 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg'
 
-interface MemoirImage { a?: string; b?: string }
 interface MemoirImage { altText?: string; imageUrl?: string }
 interface Memoir {
   id: string
@@ -261,7 +260,7 @@ const currentIndex = ref(0)
 const currentImage = computed(() => images.value[currentIndex.value])
 const openModalByUrl = (url?: string) => {
   if (!url) return
-  const idx = images.value.findIndex(i => i.b === url)
+  const idx = images.value.findIndex(i => i.imageUrl === url)
   currentIndex.value = idx >= 0 ? idx : 0
   showModal.value = true
 }
