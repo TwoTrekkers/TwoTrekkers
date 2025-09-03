@@ -36,31 +36,23 @@ jobs:
           NODE_ENV: production
           NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
-
-      - name: Deploy to GitHub Pages (push to gh-pages)
+      - name: Publish to root site (twotrekkers.github.io)
         if: github.ref == 'refs/heads/main'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
+          TARGET_REPO: twotrekkers/twotrekkers.github.io
+          PAGES_TOKEN: ${{ secrets.PAGES_PUSH_TOKEN }}
         run: |
-          echo "🚀 Starting deployment process..."
+          echo "🚀 Publishing to https://twotrekkers.github.io ..."
 
-          # Navigate to the build output directory
           cd .output/public
-
-          # Initialize git and configure identity
           git init
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Add all files and commit
           git add .
-          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️  No changes to commit."
-
-          # Set remote using GITHUB_TOKEN over HTTPS and force push to gh-pages
-          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git
-          git branch -M gh-pages
-          git push -f origin gh-pages
+          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || true
+          git branch -M main
+          git remote add origin https://x-access-token:${PAGES_TOKEN}@github.com/${TARGET_REPO}.git
+          git push -f origin main
 
           echo "✅ Deployment complete!"
-          echo "🌐 Your site should be available at: https://twotrekkers.github.io"
+          echo "🌐 Live at: https://twotrekkers.github.io"
