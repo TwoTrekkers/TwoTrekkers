@@ -3,56 +3,79 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow pushing to gh-pages branch
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
+# Allow only one concurrent deployment to avoid conflicts
 concurrency:
-  group: "pages"
+  group: "gh-pages-deploy"
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
+          
       - name: Install dependencies
         run: npm ci
-
+        
       - name: Build with Nuxt
         run: npm run generate
         env:
           NODE_ENV: production
           NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
-      - name: Deploy to GitHub Pages (push to gh-pages)
-        if: github.ref == 'refs/heads/main'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
+        
+      - name: Debug build output
         run: |
-          echo "🚀 Starting deployment process..."
+          echo "=== Build Output Structure ==="
+          ls -la .output/public/
+          echo "=== CSS Files ==="
+          find .output/public -name "*.css" -type f
+          echo "=== Asset Paths in HTML ==="
+          grep -o 'href="[^"]*_nuxt[^"]*"' .output/public/index.html | head -3
+          echo "=== Asset paths in HTML ==="
+          grep -o 'href="[^"]*_nuxt[^"]*"' .output/public/index.html | head -3
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-artifact
+          path: .output/public
 
-          cd .output/public
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || true
-          git branch -M gh-pages
-          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git
-          git push -f origin gh-pages
-
-          echo "✅ Deployment complete!"
-          echo "🌐 Live at: https://twotrekkers.github.io/TwoTrekkers/"
+  # Deployment job
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pages-artifact
+          path: dist
+          
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true 
