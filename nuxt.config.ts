@@ -85,8 +85,8 @@ export default defineNuxtConfig({
   
   // GitHub Pages configuration
   app: {
-    baseURL: '/',
-    buildAssetsDir: '/_nuxt/',
+    baseURL: '/TwoTrekkers/',
+    buildAssetsDir: '/TwoTrekkers/_nuxt/',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -109,7 +109,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Two Trekkers - Travel & Relocation Services' },
         { property: 'og:description', content: 'Professional travel and relocation services. Expert guidance for nomads, travelers, and those seeking new adventures worldwide.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://twotrekkers.github.io' },
+        { property: 'og:url', content: 'https://twotrekkers.github.io/TwoTrekkers' },
         { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         { property: 'og:site_name', content: 'Two Trekkers' },
         { property: 'og:locale', content: 'en_US' },
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
         // Apple touch icon
         { rel: 'apple-touch-icon', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         // Canonical and other links
-        { rel: 'canonical', href: 'https://twotrekkers.github.io' },
+        { rel: 'canonical', href: 'https://twotrekkers.github.io/TwoTrekkers' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'dns-prefetch', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com' }

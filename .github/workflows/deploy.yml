@@ -36,13 +36,13 @@ jobs:
           NODE_ENV: production
           NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
-      - name: Publish to root site (twotrekkers.github.io)
+      - name: Deploy to GitHub Pages (push to gh-pages)
         if: github.ref == 'refs/heads/main'
         env:
-          TARGET_REPO: twotrekkers/twotrekkers.github.io
-          PAGES_TOKEN: ${{ secrets.PAGES_PUSH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
-          echo "🚀 Publishing to https://twotrekkers.github.io ..."
+          echo "🚀 Starting deployment process..."
 
           cd .output/public
           git init
@@ -50,9 +50,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || true
-          git branch -M main
-          git remote add origin https://x-access-token:${PAGES_TOKEN}@github.com/${TARGET_REPO}.git
-          git push -f origin main
+          git branch -M gh-pages
+          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git
+          git push -f origin gh-pages
 
           echo "✅ Deployment complete!"
-          echo "🌐 Live at: https://twotrekkers.github.io"
+          echo "🌐 Live at: https://twotrekkers.github.io/TwoTrekkers/"
