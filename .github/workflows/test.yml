@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -29,12 +29,12 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io/TwoTrekkers
+          NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
 
       - name: Test static generation
         run: npm run generate
         env:
           NODE_ENV: production
-          NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io/TwoTrekkers
+          NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
