@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+echo "🔧 GitHub Pages Configuration Check"
+echo ""
+
+echo "📋 To fix the deployment issue, you need to:"
+echo ""
+echo "1. Go to your repository settings:"
+echo "   https://github.com/TwoTrekkers/TwoTrekkers/settings/pages"
+echo ""
+echo "2. Under 'Source', change from 'Deploy from a branch' to 'GitHub Actions'"
+echo ""
+echo "3. Save the changes"
+echo ""
+echo "This will allow GitHub Actions to deploy directly without environment protection rules."
+echo ""
+echo "📊 Current Status:"
+echo "✅ Test workflow: Working with Node.js v20"
+echo "❌ Deploy workflow: Blocked by environment protection rules"
+echo ""
+echo "🔧 After changing the Pages source setting, the deployment should work!"

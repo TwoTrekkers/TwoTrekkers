@@ -8,10 +8,11 @@ TwoTrekkers uses **GitHub Actions** for automated deployment to GitHub Pages. Th
 
 ### GitHub Pages Configuration
 
-1. **Go to your repository settings**: `https://github.com/TwoTrekkers/TwoTrekkers/settings`
-2. **Navigate to Pages section**
-3. **Set Source to "GitHub Actions"** (not "Deploy from a branch")
-4. **Save the changes**
+1. **Go to your repository settings**: `https://github.com/TwoTrekkers/TwoTrekkers/settings/pages`
+2. **Under "Source", change from "Deploy from a branch" to "GitHub Actions"**
+3. **Save the changes**
+
+**Important**: This setting change is required to allow GitHub Actions to deploy without environment protection rules.
 
 ### Branch Strategy
 
