@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -37,19 +37,30 @@ jobs:
           NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
           NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .output/public
+      - name: Deploy to GitHub Pages (push to gh-pages)
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "🚀 Starting deployment process..."
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          # Navigate to the build output directory
+          cd .output/public
+
+          # Initialize git and configure identity
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Add all files and commit
+          git add .
+          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️  No changes to commit."
+
+          # Set remote using GITHUB_TOKEN over HTTPS and force push to gh-pages
+          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git
+          git branch -M gh-pages
+          git push -f origin gh-pages
+
+          echo "✅ Deployment complete!"
+          echo "🌐 Your site should be available at: https://twotrekkers.github.io"
