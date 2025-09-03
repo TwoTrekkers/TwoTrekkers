@@ -55,7 +55,7 @@ useHead({
     { name: 'twitter:description', content: t('relocation.description') },
     { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
   ],
-  link: [{ rel: 'canonical', href: 'https://twotrekkers.github.io/relocation' }]
+  link: [{ rel: 'canonical', href: 'https://twotrekkers.travel/relocation' }]
 })
 
 const images = {

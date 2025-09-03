@@ -55,5 +55,5 @@ fi
 cd ../..
 
 echo "✅ Deployment complete!"
-echo "🌐 Your site should be available at: https://twotrekkers.github.io/TwoTrekkers"
+echo "🌐 Your site should be available at: https://twotrekkers.travel"
 echo "⏰ It may take a few minutes for changes to appear." 

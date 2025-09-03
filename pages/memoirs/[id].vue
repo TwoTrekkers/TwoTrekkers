@@ -107,7 +107,7 @@
 
 import MarkdownIt from 'markdown-it'
 const { t, locale } = useI18n()
-const site = 'https://twotrekkers.github.io'
+const site = 'https://twotrekkers.travel'
 const fallback = 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg'
 
 interface MemoirImage { a?: string; b?: string }

@@ -8,7 +8,7 @@
   [![Nuxt.js](https://img.shields.io/badge/Nuxt.js-4.0.3-00DC82?style=for-the-badge&logo=nuxt.js)](https://nuxt.com/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=for-the-badge&logo=github)](https://twotrekkers.github.io/TwoTrekkers)
+  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=for-the-badge&logo=github)](https://twotrekkers.travel)
   [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
 </div>
 
@@ -105,7 +105,7 @@ git push origin main
 
 ### Live Sites
 
-- **Production**: https://twotrekkers.github.io
+- **Production**: https://twotrekkers.travel
 - **Development**: http://localhost:3000
 
 ---
@@ -189,7 +189,7 @@ Create a `.env` file based on `.env.example`:
 
 ```bash
 # Site Configuration
-NUXT_PUBLIC_SITE_URL=https://twotrekkers.github.io/TwoTrekkers
+NUXT_PUBLIC_SITE_URL=https://twotrekkers.travel
 NUXT_PUBLIC_CDN_URL=https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
 
 # Security
@@ -326,7 +326,7 @@ This software and associated documentation files are confidential and proprietar
 
 **Made with ❤️ by the [NeedleTails Team](https://needletails.com)**
 
-[![Website](https://img.shields.io/badge/Website-Visit%20Us-blue?style=for-the-badge)](https://twotrekkers.github.io)
+[![Website](https://img.shields.io/badge/Website-Visit%20Us-blue?style=for-the-badge)](https://twotrekkers.travel)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow%20Us-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/two.trekkers.travels)
 [![Email](https://img.shields.io/badge/Email-Contact%20Us-red?style=for-the-badge&logo=gmail)](mailto:info@twotrekkers.travel)
 

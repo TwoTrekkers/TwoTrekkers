@@ -2,7 +2,7 @@ User-Agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://twotrekkers.github.io/sitemap.xml
+Sitemap: https://twotrekkers.travel/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

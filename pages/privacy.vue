@@ -46,7 +46,7 @@ useHead({
     { name: 'twitter:site', content: t('meta.twitter.site') },
     { name: 'twitter:creator', content: t('meta.twitter.creator') }
   ],
-  link: [{ rel: 'canonical', href: 'https://twotrekkers.github.io/privacy' }]
+  link: [{ rel: 'canonical', href: 'https://twotrekkers.travel/privacy' }]
 })
 
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })

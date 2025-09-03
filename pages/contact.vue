@@ -127,7 +127,7 @@ useHead({
     { name: 'twitter:creator', content: t('meta.twitter.creator') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://twotrekkers.github.io/contact' }
+    { rel: 'canonical', href: 'https://twotrekkers.travel/contact' }
   ]
 })
 </script>
