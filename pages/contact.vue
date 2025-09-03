@@ -104,11 +104,30 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+const { t } = useI18n()
+
 useHead({
-  title: 'Contact Us - Two Trekkers',
+  title: t('page.titles.contact'),
   meta: [
-    { name: 'description', content: 'Get in touch with Two Trekkers for travel and relocation services. We\'re here to help you plan your next adventure.' }
+    { name: 'description', content: t('contact.description') },
+    { name: 'keywords', content: 'contact Two Trekkers, travel consultation, relocation help, visa assistance, travel planning, expat services, digital nomad support' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: t('page.titles.contact') },
+    { property: 'og:description', content: t('contact.description') },
+    { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:site_name', content: t('meta.og.site_name') },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: t('page.titles.contact') },
+    { name: 'twitter:description', content: t('contact.description') },
+    { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { name: 'twitter:site', content: t('meta.twitter.site') },
+    { name: 'twitter:creator', content: t('meta.twitter.creator') }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://twotrekkers.github.io/contact' }
   ]
 })
 </script>

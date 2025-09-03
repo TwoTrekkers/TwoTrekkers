@@ -188,7 +188,7 @@ useHead(() => ({
     { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://twotrekkers.travel/' }
+    { rel: 'canonical', href: 'https://twotrekkers.github.io/' }
   ]
 }))
 

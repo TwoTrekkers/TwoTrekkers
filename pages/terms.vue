@@ -30,18 +30,23 @@ const { t } = useI18n()
 useHead(() => ({
   title: t('page.titles.terms'),
   meta: [
-    { name: 'description', content: t('terms.acceptance.content') },
-    { name: 'keywords', content: 'terms, terms of use' },
+    { name: 'description', content: t('terms.description') },
+    { name: 'keywords', content: 'terms of use, terms of service, user agreement, TwoTrekkers terms, travel consultancy terms' },
     { property: 'og:type', content: 'website' },
     { property: 'og:title', content: t('page.titles.terms') },
-    { property: 'og:description', content: t('terms.acceptance.content') },
+    { property: 'og:description', content: t('terms.description') },
     { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:site_name', content: t('meta.og.site_name') },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: t('page.titles.terms') },
-    { name: 'twitter:description', content: t('terms.acceptance.content') },
-    { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
+    { name: 'twitter:description', content: t('terms.description') },
+    { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { name: 'twitter:site', content: t('meta.twitter.site') },
+    { name: 'twitter:creator', content: t('meta.twitter.creator') }
   ],
-  link: [{ rel: 'canonical', href: 'https://twotrekkers.travel/terms' }]
+  link: [{ rel: 'canonical', href: 'https://twotrekkers.github.io/terms' }]
 }))
 
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })

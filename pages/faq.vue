@@ -43,7 +43,7 @@ useHead({
     { name: 'twitter:description', content: t('faq.description') },
     { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
   ],
-  link: [{ rel: 'canonical', href: 'https://twotrekkers.travel/faq' }]
+  link: [{ rel: 'canonical', href: 'https://twotrekkers.github.io/faq' }]
 })
 
 const images = {

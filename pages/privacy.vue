@@ -25,25 +25,30 @@
 <script setup lang="ts">
 
 import MarkdownIt from 'markdown-it'
+const { t } = useI18n()
 
 useHead({
-  title: 'Privacy Policy – TwoTrekkers',
+  title: t('page.titles.privacy'),
   meta: [
-    { name: 'description', content: 'Our privacy practices and how we handle your data.' },
-    { name: 'keywords', content: 'privacy, privacy policy' },
+    { name: 'description', content: t('privacy.description') },
+    { name: 'keywords', content: 'privacy policy, data protection, GDPR, cookie policy, TwoTrekkers privacy, travel consultancy privacy' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Privacy Policy – TwoTrekkers' },
-    { property: 'og:description', content: 'Our privacy practices and how we handle your data.' },
+    { property: 'og:title', content: t('page.titles.privacy') },
+    { property: 'og:description', content: t('privacy.description') },
     { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:site_name', content: t('meta.og.site_name') },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Privacy Policy – TwoTrekkers' },
-    { name: 'twitter:description', content: 'Our privacy practices and how we handle your data.' },
-    { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
+    { name: 'twitter:title', content: t('page.titles.privacy') },
+    { name: 'twitter:description', content: t('privacy.description') },
+    { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
+    { name: 'twitter:site', content: t('meta.twitter.site') },
+    { name: 'twitter:creator', content: t('meta.twitter.creator') }
   ],
-  link: [{ rel: 'canonical', href: 'https://twotrekkers.travel/privacy' }]
+  link: [{ rel: 'canonical', href: 'https://twotrekkers.github.io/privacy' }]
 })
 
-const { t } = useI18n()
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })
 const html = computed(() => md.render([
   `# ${t('privacy.title')}`,
