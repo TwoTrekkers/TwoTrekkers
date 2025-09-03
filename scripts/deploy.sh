@@ -34,10 +34,6 @@ else
     fi
 fi
 
-# Ensure we have the correct remote
-echo "🔍 Checking remote configuration..."
-git remote set-url origin git@github.com:TwoTrekkers/TwoTrekkers.git
-
 # Add all changes to the repository
 echo "📝 Adding files to Git..."
 git add .
@@ -46,7 +42,7 @@ git add .
 echo "💾 Committing changes..."
 git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️  No changes to commit."
 
-# Force push to the gh-pages branch (creates it if it doesn't exist)
+# Force push to the gh-pages branch
 echo "🚀 Pushing to GitHub Pages..."
 if ! git push -f origin HEAD:gh-pages; then
     echo "❌ Failed to push to remote repository. Check your permissions and repository URL."
@@ -59,5 +55,5 @@ fi
 cd ../..
 
 echo "✅ Deployment complete!"
-echo "🌐 Your site should be available at: https://twotrekkers.github.io"
-echo "⏰ It may take a few minutes for changes to appear."
+echo "🌐 Your site should be available at: https://twotrekkers.github.io/TwoTrekkers"
+echo "⏰ It may take a few minutes for changes to appear." 

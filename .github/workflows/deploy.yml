@@ -35,10 +35,6 @@ jobs:
         
       - name: Build with Nuxt
         run: npm run generate
-        env:
-          NODE_ENV: production
-          NUXT_PUBLIC_SITE_URL: https://twotrekkers.github.io
-          NUXT_PUBLIC_CDN_URL: https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
         
       - name: Debug build output
         run: |
@@ -46,10 +42,8 @@ jobs:
           ls -la .output/public/
           echo "=== CSS Files ==="
           find .output/public -name "*.css" -type f
-          echo "=== Asset Paths in HTML ==="
-          grep -o 'href="[^"]*_nuxt[^"]*"' .output/public/index.html | head -3
-          echo "=== Asset paths in HTML ==="
-          grep -o 'href="[^"]*_nuxt[^"]*"' .output/public/index.html | head -3
+          echo "=== HTML Files ==="
+          find .output/public -name "*.html" -type f | head -5
         
       - name: Upload artifact
         uses: actions/upload-artifact@v4

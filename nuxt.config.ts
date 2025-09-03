@@ -15,47 +15,27 @@ try {
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  
-  // GitHub Pages static site generation
+  // Static site generation for GitHub Pages
   nitro: {
-    compressPublicAssets: true,
-    minify: true,
-    // Static site generation for GitHub Pages
     prerender: {
-      routes: ['/sitemap.xml'],
-      ignore: ['/contact'],
-      failOnError: false
-    }
+      routes: ['/sitemap.xml']
+    },
+    compressPublicAssets: true,
+    minify: true
   },
-  
   // Ensure proper static generation
-  ssr: false,
-  
+  ssr: true,
   // Optimize for static generation
   experimental: {
     payloadExtraction: false
   },
-  
-  // Runtime config for environment variables
-  runtimeConfig: {
-    // Private keys (only available on server-side)
-    secureStorageKey: process.env.NUXT_SECURE_STORAGE_KEY || 'trekker-secure-storage-key-2024',
-    
-    // Public keys (exposed to client-side)
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://twotrekkers.github.io',
-      analyticsId: process.env.NUXT_PUBLIC_ANALYTICS_ID || '',
-      cdnUrl: process.env.NUXT_PUBLIC_CDN_URL || 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com'
-    }
-  },
-
+  css: ['~/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/i18n'
   ],
-  
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -77,7 +57,7 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
-      alwaysRedirect: true,
+      alwaysRedirect: false,
       fallbackLocale: 'en',
       cookieSecure: process.env.NODE_ENV === 'production'
     }
@@ -86,7 +66,7 @@ export default defineNuxtConfig({
   // GitHub Pages configuration
   app: {
     baseURL: '/',
-    buildAssetsDir: '_nuxt/',
+    buildAssetsDir: '/_nuxt/',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -109,7 +89,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Two Trekkers - Travel & Relocation Services' },
         { property: 'og:description', content: 'Professional travel and relocation services. Expert guidance for nomads, travelers, and those seeking new adventures worldwide.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://twotrekkers.github.io' },
+        { property: 'og:url', content: 'https://twotrekkers.travel' },
         { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         { property: 'og:site_name', content: 'Two Trekkers' },
         { property: 'og:locale', content: 'en_US' },
@@ -128,7 +108,7 @@ export default defineNuxtConfig({
         // Apple touch icon
         { rel: 'apple-touch-icon', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         // Canonical and other links
-        { rel: 'canonical', href: 'https://twotrekkers.github.io' },
+        { rel: 'canonical', href: 'https://twotrekkers.travel' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'dns-prefetch', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com' }
@@ -142,7 +122,7 @@ export default defineNuxtConfig({
             '@type': 'TravelAgency',
             name: 'Two Trekkers',
             description: 'Professional travel and relocation services',
-            url: 'https://twotrekkers.github.io',
+            url: 'https://twotrekkers.travel',
             logo: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg',
             sameAs: [
               'https://instagram.com/twotrekkers'
@@ -160,7 +140,7 @@ export default defineNuxtConfig({
   // Optimize CSS loading for static generation
   vite: {
     css: {
-      devSourcemap: false // Disable sourcemaps in production
+      devSourcemap: true
     },
     build: {
       rollupOptions: {
@@ -171,33 +151,16 @@ export default defineNuxtConfig({
           }
         }
       },
-      // Optimize chunk size
-      chunkSizeWarningLimit: 1000
     },
     optimizeDeps: {
       include: ['vue', 'vue-router', '@vueuse/core']
     },
-    // Add compression
-    define: {
-      __VUE_OPTIONS_API__: false,
-      __VUE_PROD_DEVTOOLS__: false
-    }
   },
-  
-  // Ensure CSS is properly processed
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-      ...(process.env.NODE_ENV === 'production' && {
-        cssnano: {
-          preset: ['default', {
-            discardComments: {
-              removeAll: true
-            }
-          }]
-        }
-      })
-    }
+ // Ensure CSS is properly processed
+ postcss: {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
   }
+}
 })
