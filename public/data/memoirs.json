@@ -62,10 +62,6 @@
         "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van14.svg"
       }
     ],
-    "featured": {
-      "title": "Eastern Türkiye",
-      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van2.svg"
-    },
     "publishedAt": "2025-07-18T13:08:51.000Z",
     "summary": "Exploring Eastern Türkiye from Lake Van to Mount Ararat and Nemrut, with reflections on culture and landscapes.",
     "i18n": {
@@ -214,10 +210,6 @@
         "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/MiracleGarden.svg"
       }
     ],
-    "featured": {
-      "title": "What is Dubai Really Like?",
-      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef5.svg"
-    },
     "publishedAt": "2025-06-17T02:02:23.000Z",
     "summary": "Thoughts on Dubai's contradictions and diversity beyond the skyscraper image.",
     "i18n": {
@@ -326,10 +318,6 @@
         "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_6.svg"
       }
     ],
-    "featured": {
-      "title": "Sai Kung Beaches",
-      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_chunking_mansions.svg"
-    },
     "publishedAt": "2025-06-20T05:15:47.000Z",
     "summary": "Experiences at the natural beaches of Sai Kung, Hong Kong, including camping and nature observations.",
     "i18n": {
@@ -426,10 +414,6 @@
         "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_lastday_2.svg"
       }
     ],
-    "featured": {
-      "title": "An Adventure in Kerala",
-      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_Introduction.svg"
-    },
     "publishedAt": "2025-07-03T02:07:40.000Z",
     "summary": "Travel memories from Kerala, India, with encounters in villages and exploration of backwaters.",
     "i18n": {
@@ -538,10 +522,6 @@
         "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_delights_2.svg"
       }
     ],
-    "featured": {
-      "title": "Tuscan Gem",
-      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_1.svg"
-    },
     "publishedAt": "2025-06-09T02:39:28.000Z",
     "summary": "Visiting a small Tuscan village with its culinary and cultural delights.",
     "i18n": {
@@ -572,6 +552,121 @@
         "zh-CN": "造访一个小托斯卡纳村庄，品味其美食与文化魅力。",
         "zh-HK": "造訪一個小托斯卡納村莊，品味其美食與文化魅力。",
         "zh-TW": "造訪一個小托斯卡納村莊，品味其美食與文化魅力。"
+      }
+    }
+  },
+  {
+    "_id": "fuji-san",
+    "id": "fuji-san",
+    "metadata": {
+      "author": "Remy",
+      "title": "Fuji San",
+      "description": "Mt. Fuji is Japan’s highest peak, rising to 12,389 ft, and is an iconic symbol of the country.",
+      "tags": [
+        "Japan",
+        "Mt. Fuji",
+        "Hike",
+        "Travel",
+        "Adventure",
+        "Kawaguchiko"
+      ]
+    },
+    "images": [
+      {
+        "altText": "Fuji San 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Base_1.svg"
+      },
+      {
+        "altText": "Fuji San 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Base_2.svg"
+      },
+      {
+        "altText": "Fuji San 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Base_3.svg"
+      },
+      {
+        "altText": "Fuji San 4",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Hike_1.svg"
+      },
+      {
+        "altText": "Fuji San 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/hike_2.svg"
+      },
+      {
+        "altText": "Fuji San 6",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Hike_3.svg"
+      },
+      {
+        "altText": "Fuji San 7",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji1.svg"
+      },
+      {
+        "altText": "Fuji San 8",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji2.svg"
+      },
+      {
+        "altText": "Fuji San 9",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji3.svg"
+      },
+      {
+        "altText": "Fuji San 10",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji4.svg"
+      },
+      {
+        "altText": "Fuji San 11",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji5.svg"
+      },
+      {
+        "altText": "Fuji San 12",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji6.svg"
+      },
+      {
+        "altText": "Fuji San 13",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji7.svg"
+      },
+      {
+        "altText": "Fuji San 14",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji8.svg"
+      },
+      {
+        "altText": "Fuji San 15",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji9.svg"
+      },
+      {
+        "altText": "Fuji San 16",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Fuji10.svg"
+      }
+    ],
+    "publishedAt": "2025-06-09T02:39:28.000Z",
+    "summary": "Mt. Fuji is Japan’s highest peak, rising to 12,389 ft, and is an iconic symbol of the country.",
+    "i18n": {
+      "title": {
+        "de": "Die Wanderung zum Fuji San",
+        "en": "The Hike to Fuji San",
+        "es": "La Caminata al Fuji San",
+        "fr": "La Randonnée du Fuji San",
+        "he": "הטיול להר פוג'י סן",
+        "ja": "富士山へのハイキング",
+        "ko": "후지산 등반",
+        "pt": "A Caminhada para o Fuji San",
+        "tr": "Fuji San'a Yürüyüş",
+        "zh-CN": "富士山徒步",
+        "zh-HK": "富士山徒步",
+        "zh-TW": "富士山徒步"
+      },
+      "summary": {
+        "de": "Der Fuji ist mit 3.776 Metern Japans höchster Berg und ein ikonisches Symbol des Landes.",
+        "en": "Mt. Fuji is Japan's highest peak, rising to 12,389 ft, and is an iconic symbol of the country.",
+        "es": "El Monte Fuji es el pico más alto de Japón, con 3.776 metros de altura, y es un símbolo icónico del país.",
+        "fr": "Le Mont Fuji est le plus haut sommet du Japon, s'élevant à 3.776 mètres, et est un symbole emblématique du pays.",
+        "he": "הר פוג'י הוא הפסגה הגבוהה ביותר ביפן, המתנשא לגובה 3,776 מטרים, והוא סמל איקוני של המדינה.",
+        "ja": "富士山は標高3,776メートルの日本最高峰で、日本の象徴的なシンボルです。",
+        "ko": "후지산은 높이 3,776미터로 일본의 최고봉이며, 일본의 상징적인 표상입니다.",
+        "pt": "O Monte Fuji é o pico mais alto do Japão, com 3.776 metros de altura, e é um símbolo icónico do país.",
+        "tr": "Fuji Dağı, 3.776 metre yüksekliğiyle Japonya'nın en yüksek zirvesi ve ülkenin ikonik sembolüdür.",
+        "zh-CN": "富士山是日本最高峰，海拔3,776米，是日本的标志性象征。",
+        "zh-HK": "富士山是日本最高峰，海拔3,776米，是日本的標誌性象徵。",
+        "zh-TW": "富士山是日本最高峰，海拔3,776米，是日本的標誌性象徵。"
       }
     }
   }
