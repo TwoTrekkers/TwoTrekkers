@@ -216,6 +216,7 @@
   "page.titles.login": "Connexion",
   "page.titles.account": "Détails du compte",
   "page.titles.change_password": "Changer le mot de passe",
+  "page.titles.contact": "Contactez-nous - Two Trekkers Travel",
   "page.titles.memoir_detail": "{0} - Mémoire de voyage - Two Trekkers Travel",
   "memoirs.detail.description": "Lisez ce mémoire de voyage sur {0}. Découvrez des expériences authentiques et des perspectives de {1}.",
   "error.500.title": "Erreur du serveur",
