@@ -2,15 +2,15 @@
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ $t('contact.title') }}</h1>
-        <p class="text-xl text-gray-600">{{ $t('contact.subtitle') }}</p>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ t('contact.title') }}</h1>
+        <p class="text-xl text-gray-600">{{ t('contact.subtitle') }}</p>
       </div>
 
       <div class="bg-white rounded-lg shadow-xl p-8">
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Contact Information -->
           <div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">{{ $t('contact.info.title') }}</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">{{ t('contact.info.title') }}</h2>
             <div class="space-y-4">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
@@ -19,7 +19,7 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">{{ $t('contact.info.email') }}</p>
+                  <p class="text-sm font-medium text-gray-900">{{ t('contact.info.email') }}</p>
                   <p class="text-sm text-gray-600">hello@twotrekkers.travel</p>
                 </div>
               </div>
@@ -32,8 +32,8 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">{{ $t('contact.info.location') }}</p>
-                  <p class="text-sm text-gray-600">{{ $t('contact.info.locationText') }}</p>
+                  <p class="text-sm font-medium text-gray-900">{{ t('contact.info.location') }}</p>
+                  <p class="text-sm text-gray-600">{{ t('contact.info.locationText') }}</p>
                 </div>
               </div>
 
@@ -44,15 +44,15 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">{{ $t('contact.info.response') }}</p>
-                  <p class="text-sm text-gray-600">{{ $t('contact.info.responseText') }}</p>
+                  <p class="text-sm font-medium text-gray-900">{{ t('contact.info.response') }}</p>
+                  <p class="text-sm text-gray-600">{{ t('contact.info.responseText') }}</p>
                 </div>
               </div>
             </div>
 
             <!-- Social Links -->
             <div class="mt-8">
-              <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ $t('contact.social.title') }}</h3>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ t('contact.social.title') }}</h3>
               <div class="flex space-x-4">
                 <a href="https://instagram.com/twotrekkers" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -65,36 +65,36 @@
 
           <!-- Contact Form -->
           <div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">{{ $t('contact.form.title') }}</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">{{ t('contact.form.title') }}</h2>
             <form class="space-y-4">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">{{ $t('contact.form.name') }}</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">{{ t('contact.form.name') }}</label>
                 <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">{{ $t('contact.form.email') }}</label>
+                <label for="email" class="block text-sm font-medium text-gray-700">{{ t('contact.form.email') }}</label>
                 <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
               </div>
 
               <div>
-                <label for="subject" class="block text-sm font-medium text-gray-700">{{ $t('contact.form.subject') }}</label>
+                <label for="subject" class="block text-sm font-medium text-gray-700">{{ t('contact.form.subject') }}</label>
                 <select id="subject" name="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                  <option value="">{{ $t('contact.form.selectSubject') }}</option>
-                  <option value="travel">{{ $t('contact.form.travel') }}</option>
-                  <option value="relocation">{{ $t('contact.form.relocation') }}</option>
-                  <option value="nomad">{{ $t('contact.form.nomad') }}</option>
-                  <option value="other">{{ $t('contact.form.other') }}</option>
+                  <option value="">{{ t('contact.form.selectSubject') }}</option>
+                  <option value="travel">{{ t('contact.form.travel') }}</option>
+                  <option value="relocation">{{ t('contact.form.relocation') }}</option>
+                  <option value="nomad">{{ t('contact.form.nomad') }}</option>
+                  <option value="other">{{ t('contact.form.other') }}</option>
                 </select>
               </div>
 
               <div>
-                <label for="message" class="block text-sm font-medium text-gray-700">{{ $t('contact.form.message') }}</label>
+                <label for="message" class="block text-sm font-medium text-gray-700">{{ t('contact.form.message') }}</label>
                 <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
               </div>
 
               <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                {{ $t('contact.form.send') }}
+                {{ t('contact.form.send') }}
               </button>
             </form>
           </div>
