@@ -34,6 +34,10 @@ else
     fi
 fi
 
+# Ensure we have the correct remote
+echo "🔍 Checking remote configuration..."
+git remote set-url origin git@github.com:TwoTrekkers/TwoTrekkers.git
+
 # Add all changes to the repository
 echo "📝 Adding files to Git..."
 git add .
@@ -42,7 +46,7 @@ git add .
 echo "💾 Committing changes..."
 git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️  No changes to commit."
 
-# Force push to the gh-pages branch
+# Force push to the gh-pages branch (creates it if it doesn't exist)
 echo "🚀 Pushing to GitHub Pages..."
 if ! git push -f origin HEAD:gh-pages; then
     echo "❌ Failed to push to remote repository. Check your permissions and repository URL."
