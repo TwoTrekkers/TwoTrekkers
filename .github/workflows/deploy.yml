@@ -49,9 +49,26 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         run: |
-          chmod +x ${{ github.workspace }}/scripts/deploy.sh
-          cd ${{ github.workspace }}
-          ./scripts/deploy.sh
+          echo "🚀 Starting deployment process..."
+          
+          # Navigate to the build output directory
+          cd .output/public
+          
+          # Initialize git repository
+          git init
+          git remote add origin git@github.com:TwoTrekkers/TwoTrekkers.git
+          
+          # Add all files
+          git add .
+          
+          # Commit changes
+          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')" || echo "ℹ️  No changes to commit."
+          
+          # Force push to gh-pages branch
+          git push -f origin HEAD:gh-pages
+          
+          echo "✅ Deployment complete!"
+          echo "🌐 Your site should be available at: https://twotrekkers.github.io"
       
       - name: Deployment Status
         run: |
