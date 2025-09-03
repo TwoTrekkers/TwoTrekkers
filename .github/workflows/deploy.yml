@@ -48,8 +48,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: |
+          chmod +x scripts/deploy.sh
+          ./scripts/deploy.sh
       
       - name: Deployment Status
         run: |
