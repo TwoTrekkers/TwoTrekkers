@@ -1,23 +1,578 @@
 [
   {
-    "_id": "Sample Memoir",
-    "a": "2c4a3c8b-8a6c-4a2f-9d8f-111111111111",
-    "b": { "a": "Cole", "b": "Sample Memoir", "c": "# Sample Memoir\n\nThis is **markdown** content for a sample memoir.", "d": ["memoir", "travel"] },
-    "c": "[\"memoir\",\"travel\"]",
-    "d": [ { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/HomeLandingImage.svg" } ],
-    "e": { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/HomeLandingImage.svg" },
-    "f": "2025-01-01T00:00:00.000Z",
-    "g": "2025-01-02T00:00:00.000Z",
-    "h": "A short summary of the memoir."
+    "_id": "Eastern Türkiye",
+    "id": "Eastern Türkiye",
+    "metadata": {
+      "author": "Remy",
+      "title": "Eastern Türkiye",
+      "description": "Exploring Eastern Türkiye from Lake Van to Mount Ararat and Nemrut, with reflections on culture and landscapes.",
+      "tags": [
+        "Turkey",
+        "Eastern Turkey",
+        "Van Lake",
+        "Mount Ararat",
+        "Nemrut",
+        "Culture",
+        "Landscapes"
+      ]
+    },
+    "images": [
+      {
+        "altText": "Van Lake",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van2.svg"
+      },
+      {
+        "altText": "Akdamar Island",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van5.svg"
+      },
+      {
+        "altText": "Mount Ararat",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van8.svg"
+      },
+      {
+        "altText": "Ishak Pasha Palace",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van1.svg"
+      },
+      {
+        "altText": "Nemrut",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van9.svg"
+      },
+      {
+        "altText": "Nemrut Detail",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van10.svg"
+      },
+      {
+        "altText": "Van3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van3.svg"
+      },
+      {
+        "altText": "Van11",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van11.svg"
+      },
+      {
+        "altText": "Van12",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van12.svg"
+      },
+      {
+        "altText": "Van13",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van13.svg"
+      },
+      {
+        "altText": "Van14",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van14.svg"
+      }
+    ],
+    "featured": {
+      "title": "Eastern Türkiye",
+      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Van2.svg"
+    },
+    "publishedAt": "2025-07-18T13:08:51.000Z",
+    "summary": "Exploring Eastern Türkiye from Lake Van to Mount Ararat and Nemrut, with reflections on culture and landscapes.",
+    "i18n": {
+      "title": {
+        "de": "Osttürkei",
+        "en": "Eastern Türkiye",
+        "es": "Turquía Oriental",
+        "fr": "Turquie Orientale",
+        "he": "טורקיה המזרחית",
+        "ja": "東トルコ",
+        "ko": "동부 튀르키예",
+        "pt": "Turquia Oriental",
+        "tr": "Doğu Türkiye",
+        "zh-CN": "土耳其东部",
+        "zh-HK": "土耳其東部",
+        "zh-TW": "土耳其東部"
+      },
+      "summary": {
+        "de": "Erkundung der Osttürkei vom Vansee bis zum Berg Ararat und Nemrut, mit Reflexionen über Kultur und Landschaften.",
+        "en": "Exploring Eastern Türkiye from Lake Van to Mount Ararat and Nemrut, with reflections on culture and landscapes.",
+        "es": "Explorando Turquía Oriental desde el Lago Van hasta el Monte Ararat y Nemrut, con reflexiones sobre la cultura y los paisajes.",
+        "fr": "Explorer la Turquie orientale du lac de Van au mont Ararat et au Nemrut, avec des réflexions sur la culture et les paysages.",
+        "he": "חקר טורקיה המזרחית מהאגם ואן להר אררט ונמרוד, עם מחשבות על תרבות ונופים.",
+        "ja": "ヴァン湖からアララト山、ネムルート山まで、東トルコを探訪し、文化と風景を振り返る。",
+        "ko": "반 호수에서 아라랏산과 넴루트산까지 동부 튀르키예를 탐험하며 문화와 풍경을 되돌아봅니다.",
+        "pt": "Explorando a Turquia Oriental, do Lago Van ao Monte Ararat e Nemrut, com reflexões sobre cultura e paisagens.",
+        "tr": "Van Gölü'nden Ağrı Dağı ve Nemrut'a kadar Doğu Türkiye'yi keşfetmek, kültür ve manzaralar üzerine yansımalarla.",
+        "zh-CN": "探索土耳其东部，从凡湖到阿勒山和内姆鲁特山，感受文化与风景。",
+        "zh-HK": "探索土耳其東部，從凡湖到阿勒山和內姆魯特山，感受文化與風景。",
+        "zh-TW": "探索土耳其東部，從凡湖到阿勒山和內姆魯特山，感受文化與風景。"
+      }
+    }
   },
   {
-    "_id": "Another Memoir",
-    "a": "7b1f0d44-2f3e-4d5a-8c2e-222222222222",
-    "b": { "a": "Alex", "b": "Another Memoir", "c": "# Another Memoir\n\nMore _markdown_ with details and images.", "d": ["memoir", "tips"] },
-    "c": "[\"memoir\",\"tips\"]",
-    "d": [ { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/Tourism.svg" } ],
-    "e": { "a": "cover.svg", "b": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/Tourism.svg" },
-    "f": "2025-01-05T00:00:00.000Z",
-    "h": "Another summary for preview cards."
+    "_id": "what-is-dubai-really-like",
+    "id": "what-is-dubai-really-like",
+    "metadata": {
+      "author": "Remy",
+      "title": "What is Dubai Really Like?",
+      "description": "Thoughts on Dubai's contradictions and diversity beyond the skyscraper image.",
+      "tags": [
+        "Dubai",
+        "UAE",
+        "Middle East",
+        "Culture",
+        "Diversity",
+        "Urban Life",
+        "Expatriates"
+      ]
+    },
+    "images": [
+      {
+        "altText": "Al Seef 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef5.svg"
+      },
+      {
+        "altText": "Burj Khalifa Day",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/BurjKhalifaDay.svg"
+      },
+      {
+        "altText": "Dubai Aquarium",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiAquarium.svg"
+      },
+      {
+        "altText": "Dubai Beach 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiBeach2.svg"
+      },
+      {
+        "altText": "Dubai Boat",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiBoat.svg"
+      },
+      {
+        "altText": "Dubai Mall Fountain",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiMallFountain.svg"
+      },
+      {
+        "altText": "Miracle Garden",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/MiracleGarden.svg"
+      },
+      {
+        "altText": "Burj Al Arab",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/BurjAlArab.svg"
+      },
+      {
+        "altText": "Burj Khalifa",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/BurjKhalifa.svg"
+      },
+      {
+        "altText": "The Frame",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiTheFrame.svg"
+      },
+      {
+        "altText": "Dubai Internet City",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiInternetCity.svg"
+      },
+      {
+        "altText": "Al Seef 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef1.svg"
+      },
+      {
+        "altText": "Al Seef 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef2.svg"
+      },
+      {
+        "altText": "Al Seef 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef3.svg"
+      },
+      {
+        "altText": "Dubai Beach",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiBeach.svg"
+      },
+      {
+        "altText": "Dubai City View",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiCityView.svg"
+      },
+      {
+        "altText": "Sky Pool",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiSkyPool.svg"
+      },
+      {
+        "altText": "Al Seef 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef5.svg"
+      },
+      {
+        "altText": "Burj Khalifa Day",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/BurjKhalifaDay.svg"
+      },
+      {
+        "altText": "Dubai Aquarium",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiAquarium.svg"
+      },
+      {
+        "altText": "Dubai Beach 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiBeach2.svg"
+      },
+      {
+        "altText": "Dubai Boat",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiBoat.svg"
+      },
+      {
+        "altText": "Dubai Mall Fountain",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/DubaiMallFountain.svg"
+      },
+      {
+        "altText": "Miracle Garden",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/MiracleGarden.svg"
+      }
+    ],
+    "featured": {
+      "title": "What is Dubai Really Like?",
+      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/AlSeef5.svg"
+    },
+    "publishedAt": "2025-06-17T02:02:23.000Z",
+    "summary": "Thoughts on Dubai's contradictions and diversity beyond the skyscraper image.",
+    "i18n": {
+      "title": {
+        "de": "Wie ist Dubai wirklich?",
+        "en": "What is Dubai Really Like?",
+        "es": "¿Cómo es realmente Dubái?",
+        "fr": "À quoi ressemble vraiment Dubaï ?",
+        "he": "איך דובאי באמת?",
+        "ja": "ドバイは本当はどんな場所？",
+        "ko": "두바이는 실제로 어떤 곳일까?",
+        "pt": "Como é realmente Dubai?",
+        "tr": "Dubai Gerçekte Nasıl?",
+        "zh-CN": "迪拜真实的一面是什么？",
+        "zh-HK": "杜拜真實的一面是什麼？",
+        "zh-TW": "杜拜真實的一面是什麼？"
+      },
+      "summary": {
+        "de": "Gedanken über Dubais Widersprüche und Vielfalt, die über das Image der Wolkenkratzer hinausgehen.",
+        "en": "Thoughts on Dubai's contradictions and diversity beyond the skyscraper image.",
+        "es": "Reflexiones sobre las contradicciones y la diversidad de Dubái más allá de su imagen de rascacielos.",
+        "fr": "Réflexions sur les contradictions et la diversité de Dubaï au-delà de son image de gratte-ciel.",
+        "he": "מחשבות על הניגודים והמגוון של דובאי שמעבר לדימוי גורדי השחקים.",
+        "ja": "摩天楼のイメージを超えた、ドバイの矛盾と多様性についての考察。",
+        "ko": "마천루 이미지 너머 두바이의 모순과 다양성에 대한 성찰.",
+        "pt": "Reflexões sobre as contradições e a diversidade do Dubai para além da imagem dos arranha-céus.",
+        "tr": "Dubai'nin gökdelen imajının ötesindeki çelişkileri ve çeşitliliği üzerine düşünceler.",
+        "zh-CN": "思考迪拜在摩天大楼形象之外的矛盾与多样性。",
+        "zh-HK": "思考杜拜在摩天大樓形象之外的矛盾與多樣性。",
+        "zh-TW": "思考杜拜在摩天大樓形象之外的矛盾與多樣性。"
+      }
+    }
+  },
+  {
+    "_id": "sai-kung-beaches",
+    "id": "sai-kung-beaches",
+    "metadata": {
+      "author": "Remy",
+      "title": "Sai Kung Beaches",
+      "description": "Experiences at the natural beaches of Sai Kung, Hong Kong, including camping and nature observations.",
+      "tags": [
+        "Hong Kong",
+        "Sai Kung",
+        "Beaches",
+        "Nature",
+        "Camping",
+        "Outdoors",
+        "Adventure"
+      ]
+    },
+    "images": [
+      {
+        "altText": "Chunking Mansions",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_chunking_mansions.svg"
+      },
+      {
+        "altText": "Hike To Paradise 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_2.svg"
+      },
+      {
+        "altText": "Hike To Paradise 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_3.svg"
+      },
+      {
+        "altText": "Hike To Paradise 4",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_4.svg"
+      },
+      {
+        "altText": "Hike To Paradise 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_5.svg"
+      },
+      {
+        "altText": "Hike To Paradise 6",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_6.svg"
+      },
+      {
+        "altText": "Hike To Paradise 7",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_7.svg"
+      },
+      {
+        "altText": "Hike To Paradise 8",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_hiketoparadise_8.svg"
+      },
+      {
+        "altText": "Journey Back 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_1.svg"
+      },
+      {
+        "altText": "Journey Back 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_2.svg"
+      },
+      {
+        "altText": "Journey Back 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_3.svg"
+      },
+      {
+        "altText": "Journey Back 4",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_4.svg"
+      },
+      {
+        "altText": "Journey Back 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_5.svg"
+      },
+      {
+        "altText": "Journey Back 6",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_journeyback_6.svg"
+      }
+    ],
+    "featured": {
+      "title": "Sai Kung Beaches",
+      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/HK_chunking_mansions.svg"
+    },
+    "publishedAt": "2025-06-20T05:15:47.000Z",
+    "summary": "Experiences at the natural beaches of Sai Kung, Hong Kong, including camping and nature observations.",
+    "i18n": {
+      "title": {
+        "de": "Strände von Sai Kung",
+        "en": "Sai Kung Beaches",
+        "es": "Playas de Sai Kung",
+        "fr": "Plages de Sai Kung",
+        "he": "חופי סאי קונג",
+        "ja": "西貢のビーチ",
+        "ko": "사이쿵 해변",
+        "pt": "Praias de Sai Kung",
+        "tr": "Sai Kung Plajları",
+        "zh-CN": "西贡海滩",
+        "zh-HK": "西貢海灘",
+        "zh-TW": "西貢海灘"
+      },
+      "summary": {
+        "de": "Erfahrungen an den natürlichen Stränden von Sai Kung, Hongkong, einschließlich Camping und Naturbeobachtungen.",
+        "en": "Experiences at the natural beaches of Sai Kung, Hong Kong, including camping and nature observations.",
+        "es": "Experiencias en las playas naturales de Sai Kung, Hong Kong, incluyendo acampada y observación de la naturaleza.",
+        "fr": "Expériences sur les plages naturelles de Sai Kung, Hong Kong, incluant le camping et l'observation de la nature.",
+        "he": "חוויות בחופים הטבעיים של סאי קונג, הונג קונג, כולל קמפינג ותצפיות טבע.",
+        "ja": "香港・西貢の自然ビーチでの体験。キャンプや自然観察を含む。",
+        "ko": "홍콩 사이쿵의 자연 해변에서의 경험, 캠핑과 자연 관찰 포함.",
+        "pt": "Experiências nas praias naturais de Sai Kung, Hong Kong, incluindo acampamento e observação da natureza.",
+        "tr": "Hong Kong'daki Sai Kung'un doğal plajlarında kamp ve doğa gözlemleri dahil deneyimler.",
+        "zh-CN": "在香港西贡自然海滩的体验，包括露营和自然观察。",
+        "zh-HK": "在香港西貢自然海灘的體驗，包括露營和自然觀察。",
+        "zh-TW": "在香港西貢自然海灘的體驗，包括露營和自然觀察。"
+      }
+    }
+  },
+  {
+    "_id": "an-adventure-in-kerala",
+    "id": "an-adventure-in-kerala",
+    "metadata": {
+      "author": "Remy",
+      "title": "An Adventure in Kerala",
+      "description": "Travel memories from Kerala, India, with encounters in villages and exploration of backwaters.",
+      "tags": [
+        "India",
+        "Kerala",
+        "Backwaters",
+        "Villages",
+        "Culture",
+        "Travel",
+        "Adventure"
+      ]
+    },
+    "images": [
+      {
+        "altText": "Mosque next to Temple",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_Introduction.svg"
+      },
+      {
+        "altText": "Airbnb Street",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_Arrival.svg"
+      },
+      {
+        "altText": "Exploring 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_exploring_2.svg"
+      },
+      {
+        "altText": "Exploring 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_exploring_3.svg"
+      },
+      {
+        "altText": "2Exploring 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_2exploring_1.svg"
+      },
+      {
+        "altText": "2Exploring 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_2exploring_2.svg"
+      },
+      {
+        "altText": "3Exploring 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_3exploring_1.svg"
+      },
+      {
+        "altText": "3Exploring 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_3exploring_2.svg"
+      },
+      {
+        "altText": "Wedding Day",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_wedding_2.svg"
+      },
+      {
+        "altText": "Golden Beach",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_lastday_1.svg"
+      },
+      {
+        "altText": "Golden Beach 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_lastday_2.svg"
+      }
+    ],
+    "featured": {
+      "title": "An Adventure in Kerala",
+      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/Kerala_Introduction.svg"
+    },
+    "publishedAt": "2025-07-03T02:07:40.000Z",
+    "summary": "Travel memories from Kerala, India, with encounters in villages and exploration of backwaters.",
+    "i18n": {
+      "title": {
+        "de": "Ein Abenteuer in Kerala",
+        "en": "An Adventure in Kerala",
+        "es": "Una aventura en Kerala",
+        "fr": "Une aventure au Kerala",
+        "he": "הרפתקה בקרלה",
+        "ja": "ケララでの冒険",
+        "ko": "케랄라에서의 모험",
+        "pt": "Uma Aventura em Kerala",
+        "tr": "Kerala'da Bir Macera",
+        "zh-CN": "喀拉拉邦的冒险",
+        "zh-HK": "喀拉拉邦的冒險",
+        "zh-TW": "喀拉拉邦的冒險"
+      },
+      "summary": {
+        "de": "Reiseerinnerungen aus Kerala, Indien, mit Begegnungen in Dörfern und Erkundung der Backwaters.",
+        "en": "Travel memories from Kerala, India, with encounters in villages and exploration of backwaters.",
+        "es": "Recuerdos de viaje de Kerala, India, con encuentros en pueblos y exploración de los remansos.",
+        "fr": "Souvenirs de voyage du Kerala, en Inde, avec des rencontres dans les villages et l'exploration des backwaters.",
+        "he": "זכרונות מסע מקרלה, הודו, עם מפגשים בכפרים וחקירת תעלות המים.",
+        "ja": "インド・ケララでの旅の思い出。村での出会いや水郷地帯の探検。",
+        "ko": "인도 케랄라에서의 여행 추억, 마을에서의 만남과 수로 탐험.",
+        "pt": "Memórias de viagem em Kerala, Índia, com encontros em vilas e exploração dos remansos.",
+        "tr": "Hindistan Kerala'dan köylerde karşılaşmalar ve su yollarını keşfetme üzerine seyahat anıları.",
+        "zh-CN": "印度喀拉拉邦的旅行回忆，包括在村庄的邂逅和对回水区的探索。",
+        "zh-HK": "印度喀拉拉邦的旅行回憶，包括在村莊的邂逅和對回水區的探索。",
+        "zh-TW": "印度喀拉拉邦的旅行回憶，包括在村莊的邂逅和對回水區的探索。"
+      }
+    }
+  },
+  {
+    "_id": "tuscan-gem",
+    "id": "tuscan-gem",
+    "metadata": {
+      "author": "Michael",
+      "title": "Tuscan Gem",
+      "description": "Visiting a small Tuscan village with its culinary and cultural delights.",
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Village",
+        "Culinary",
+        "Culture",
+        "Travel",
+        "Food"
+      ]
+    },
+    "images": [
+      {
+        "altText": "San Gimignano 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_1.svg"
+      },
+      {
+        "altText": "San Gimignano 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_2.svg"
+      },
+      {
+        "altText": "San Gimignano 3",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_3.svg"
+      },
+      {
+        "altText": "San Gimignano 4",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_4.svg"
+      },
+      {
+        "altText": "San Gimignano 5",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_5.svg"
+      },
+      {
+        "altText": "San Gimignano 6",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_6.svg"
+      },
+      {
+        "altText": "San Gimignano 7",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_7.svg"
+      },
+      {
+        "altText": "San Gimignano 8",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_8.svg"
+      },
+      {
+        "altText": "San Gimignano 9",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_9.svg"
+      },
+      {
+        "altText": "San Gimignano 10",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_10.svg"
+      },
+      {
+        "altText": "San Gimignano 11",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_11.svg"
+      },
+      {
+        "altText": "San Gimignano 12",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_12.svg"
+      },
+      {
+        "altText": "San Gimignano Delights 1",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_delights_1.svg"
+      },
+      {
+        "altText": "San Gimignano Delights 2",
+        "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_delights_2.svg"
+      }
+    ],
+    "featured": {
+      "title": "Tuscan Gem",
+      "imageUrl": "https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/multipart-uploads/san_gimignano_1.svg"
+    },
+    "publishedAt": "2025-06-09T02:39:28.000Z",
+    "summary": "Visiting a small Tuscan village with its culinary and cultural delights.",
+    "i18n": {
+      "title": {
+        "de": "Toskanisches Juwel",
+        "en": "Tuscan Gem",
+        "es": "Joya Toscana",
+        "fr": "Trésor Toscan",
+        "he": "אוצר טוסקני",
+        "ja": "トスカーナの宝石",
+        "ko": "토스카나의 보석",
+        "pt": "Joia Toscana",
+        "tr": "Toskana İncisi",
+        "zh-CN": "托斯卡纳的瑰宝",
+        "zh-HK": "托斯卡納的瑰寶",
+        "zh-TW": "托斯卡納的瑰寶"
+      },
+      "summary": {
+        "de": "Besuch eines kleinen toskanischen Dorfes mit seinen kulinarischen und kulturellen Genüssen.",
+        "en": "Visiting a small Tuscan village with its culinary and cultural delights.",
+        "es": "Visita a un pequeño pueblo toscano con sus delicias culinarias y culturales.",
+        "fr": "Visite d'un petit village toscan avec ses délices culinaires et culturels.",
+        "he": "ביקור בכפר קטן בטוסקנה עם המטעמים הקולינריים והתרבותיים שלו.",
+        "ja": "小さなトスカーナの村を訪れ、料理や文化の魅力を楽しむ。",
+        "ko": "작은 토스카나 마을을 방문하며 요리와 문화적 즐거움을 경험.",
+        "pt": "Visita a uma pequena vila toscana com suas delícias culinárias e culturais.",
+        "tr": "Küçük bir Toskana köyünü ziyaret, mutfak ve kültürel lezzetleriyle.",
+        "zh-CN": "造访一个小托斯卡纳村庄，品味其美食与文化魅力。",
+        "zh-HK": "造訪一個小托斯卡納村莊，品味其美食與文化魅力。",
+        "zh-TW": "造訪一個小托斯卡納村莊，品味其美食與文化魅力。"
+      }
+    }
   }
 ]

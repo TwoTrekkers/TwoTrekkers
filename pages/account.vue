@@ -1,9 +1,9 @@
 <template>
   <section class="w-4/5 mx-auto py-12">
-    <h1>{{ $t('nav.account') }}</h1>
-    <p class="mt-2 text-text-muted">{{ $t('page.titles.account') }}</p>
+    <h1>{{ t('nav.account') }}</h1>
+    <p class="mt-2 text-text-muted">{{ t('page.titles.account') }}</p>
     <div class="mt-8">
-      <img :src="images.accountAvatar" :alt="$t('alt.twotrekkers_logo')" width="120" height="120" />
+      <img :src="images.accountAvatar" :alt="t('alt.twotrekkers_logo')" width="120" height="120" />
     </div>
   </section>
 </template>

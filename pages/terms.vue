@@ -1,8 +1,23 @@
 <template>
+  <!-- Hero -->
+  <section class="section px-0">
+    <div class="container-wide">
+      <div class="relative rounded-2xl overflow-hidden shadow-card">
+        <img :src="images.banner" :alt="t('alt.twotrekkers_logo')" class="w-full h-[300px] md:h-[420px] object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10">
+          <h1 class="text-large">{{ t('terms.title') }}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
   <section class="section">
-    <div class="container-wide prose prose-invert max-w-none">
-      <h1>{{ $t('terms.title') }}</h1>
-      <div v-html="html"></div>
+    <div class="container-wide">
+      <article class="card p-6 md:p-10 prose prose-invert max-w-none">
+        <div v-html="html"></div>
+      </article>
     </div>
   </section>
 </template>
@@ -30,7 +45,28 @@ useHead(() => ({
 }))
 
 const md = new MarkdownIt({ html: false, linkify: true, breaks: true })
-const html = computed(() => md.render(`# ${t('terms.title')}` + '\n\n' + t('terms.acceptance.title') + '\n\n' + t('terms.acceptance.content')))
+const html = computed(() => md.render([
+  `# ${t('terms.title')}`,
+  `## ${t('terms.acceptance.title')}`,
+  t('terms.acceptance.content'),
+  `## ${t('terms.services.title')}`,
+  t('terms.services.content'),
+  `## ${t('terms.responsibilities.title')}`,
+  t('terms.responsibilities.intro'),
+  `- ${t('terms.responsibilities.law')}`,
+  `- ${t('terms.responsibilities.restrict')}`,
+  `- ${t('terms.responsibilities.advertising')}`,
+  `## ${t('terms.intellectual.title')}`,
+  t('terms.intellectual.content'),
+  `## ${t('terms.liability.title')}`,
+  t('terms.liability.content'),
+  `## ${t('terms.changes.title')}`,
+  t('terms.changes.content')
+].join('\n\n')))
+
+const images = {
+  banner: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/Cityscape.svg'
+}
 </script>
 
 

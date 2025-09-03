@@ -1,34 +1,100 @@
 <template>
-  <div class="relative inline-block text-left">
-    <button @click="open = !open" class="px-3 py-1 rounded-md border border-border text-sm">
-      {{ locale.toUpperCase() }} ▼
+  <div class="relative">
+    <button
+      @click="isOpen = !isOpen"
+      class="inline-flex items-center justify-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/70 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      :aria-expanded="isOpen"
+      aria-label="Select language"
+    >
+      <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+      <span class="text-white text-xs sm:text-sm font-medium whitespace-nowrap">{{ currentLocaleName }}</span>
     </button>
-    <div v-if="open" class="absolute mt-2 w-44 rounded-md bg-background border border-border p-1 z-10 max-h-72 overflow-auto">
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('en')">English</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('de')">Deutsch</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('fr')">Français</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('es')">Español</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('pt')">Português</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('ja')">日本語</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('ko')">한국어</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('he')">עברית</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('tr')">Türkçe</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('zh-CN')">简体中文</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('zh-TW')">繁體中文</button>
-      <button class="block w-full text-left px-2 py-1 rounded hover:bg-white/10" @click="change('zh-HK')">繁體中文(香港)</button>
+
+    <div
+      v-if="isOpen"
+      class="absolute right-0 mt-2 w-48 sm:w-56 bg-gray-800 rounded-lg shadow-xl border border-gray-700/50 z-50 max-h-80 overflow-y-auto"
+    >
+      <div class="py-2">
+        <button
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          @click="switchLanguage(locale.code)"
+          class="w-full text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200 flex items-center space-x-3"
+          :class="{ 'bg-blue-600/20 text-blue-400': locale.code === currentLocale }"
+        >
+          <span class="text-sm">{{ locale.name }}</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-const open = ref(false)
-const { locale, setLocale } = useI18n()
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
-function change(code: string) {
-  setLocale(code)
-  open.value = false
+const isOpen = ref(false)
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const router = useRouter()
+
+const currentLocale = computed(() => locale.value)
+const currentLocaleName = computed(() => {
+  const current = locales.value.find((l: any) => l.code === locale.value)
+  return current?.name || 'English'
+})
+const availableLocales = computed(() => locales.value)
+
+const switchLanguage = (code: string) => {
+  // Get the path for the new locale
+  const path = switchLocalePath(code as any)
+  
+  if (path) {
+    // Navigate to the new locale path
+    router.push(path)
+  }
+  
+  isOpen.value = false
 }
-</script>
 
+const getLanguageCode = (code: string) => {
+  const languageCodes: Record<string, string> = {
+    en: 'EN',
+    es: 'ES',
+    fr: 'FR',
+    de: 'DE',
+    'zh-CN': 'ZH-CN',
+    'zh-TW': 'ZH-TW',
+    'zh-HK': 'ZH-HK',
+    ja: 'JA',
+    pt: 'PT',
+    ko: 'KO',
+    tr: 'TR',
+    he: 'HE'
+  }
+  return languageCodes[code] || code.toUpperCase()
+}
 
+// Close dropdown when clicking outside
+const handleClickOutside = (event: Event) => {
+  const target = event.target as HTMLElement
+  if (!target.closest('.relative')) {
+    isOpen.value = false
+  }
+}
+
+onMounted(() => {
+  // Only add event listener on client side
+  if (process.client) {
+    document.addEventListener('click', handleClickOutside)
+  }
+})
+
+onBeforeUnmount(() => {
+  // Only remove event listener on client side
+  if (process.client) {
+    document.removeEventListener('click', handleClickOutside)
+  }
+})
+</script> 

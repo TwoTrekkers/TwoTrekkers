@@ -7,10 +7,18 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
+    "build:static": "nuxt generate",
+    "analyze": "nuxt build --analyze",
+    "type-check": "nuxt typecheck",
+    "test": "npm run type-check && npm run build"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.11.2",
+    "@vueuse/nuxt": "^13.9.0",
     "nuxt": "^4.0.3",
+    "secure-ls": "^2.0.0",
     "vue": "^3.5.20",
     "vue-router": "^4.5.1"
   },
@@ -20,6 +28,8 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/markdown-it": "^14.1.2",
     "autoprefixer": "^10.4.21",
+    "cssnano": "^6.0.5",
+
     "markdown-it": "^14.1.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
