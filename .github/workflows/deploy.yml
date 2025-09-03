@@ -49,7 +49,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         run: |
-          chmod +x scripts/deploy.sh
+          chmod +x ${{ github.workspace }}/scripts/deploy.sh
+          cd ${{ github.workspace }}
           ./scripts/deploy.sh
       
       - name: Deployment Status
