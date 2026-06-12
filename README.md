@@ -8,7 +8,7 @@
   [![Nuxt.js](https://img.shields.io/badge/Nuxt.js-4.0.3-00DC82?style=for-the-badge&logo=nuxt.js)](https://nuxt.com/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=for-the-badge&logo=github)](https://twotrekkers.travel)
+  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=for-the-badge&logo=github)](https://twotrekkers.com)
   [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
 </div>
 
@@ -105,7 +105,7 @@ git push origin main
 
 ### Live Sites
 
-- **Production**: https://twotrekkers.travel
+- **Production**: https://twotrekkers.com
 - **Development**: http://localhost:3000
 
 ---
@@ -189,7 +189,7 @@ Create a `.env` file based on `.env.example`:
 
 ```bash
 # Site Configuration
-NUXT_PUBLIC_SITE_URL=https://twotrekkers.travel
+NUXT_PUBLIC_SITE_URL=https://twotrekkers.com
 NUXT_PUBLIC_CDN_URL=https://twotrekkers.nyc3.cdn.digitaloceanspaces.com
 
 # Security
@@ -326,8 +326,8 @@ This software and associated documentation files are confidential and proprietar
 
 **Made with ❤️ by the [NeedleTails Team](https://needletails.com)**
 
-[![Website](https://img.shields.io/badge/Website-Visit%20Us-blue?style=for-the-badge)](https://twotrekkers.travel)
+[![Website](https://img.shields.io/badge/Website-Visit%20Us-blue?style=for-the-badge)](https://twotrekkers.com)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow%20Us-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/two.trekkers.travels)
-[![Email](https://img.shields.io/badge/Email-Contact%20Us-red?style=for-the-badge&logo=gmail)](mailto:info@twotrekkers.travel)
+[![Email](https://img.shields.io/badge/Email-Contact%20Us-red?style=for-the-badge&logo=gmail)](mailto:info@twotrekkers.com)
 
 </div>

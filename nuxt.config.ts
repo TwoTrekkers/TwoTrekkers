@@ -89,7 +89,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Two Trekkers - Travel & Relocation Services' },
         { property: 'og:description', content: 'Professional travel and relocation services. Expert guidance for nomads, travelers, and those seeking new adventures worldwide.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://twotrekkers.travel' },
+        { property: 'og:url', content: 'https://twotrekkers.com' },
         { property: 'og:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         { property: 'og:site_name', content: 'Two Trekkers' },
         { property: 'og:locale', content: 'en_US' },
@@ -108,7 +108,7 @@ export default defineNuxtConfig({
         // Apple touch icon
         { rel: 'apple-touch-icon', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' },
         // Canonical and other links
-        { rel: 'canonical', href: 'https://twotrekkers.travel' },
+        { rel: 'canonical', href: 'https://twotrekkers.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'dns-prefetch', href: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com' }
@@ -122,7 +122,7 @@ export default defineNuxtConfig({
             '@type': 'TravelAgency',
             name: 'Two Trekkers',
             description: 'Professional travel and relocation services',
-            url: 'https://twotrekkers.travel',
+            url: 'https://twotrekkers.com',
             logo: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg',
             sameAs: [
               'https://instagram.com/twotrekkers'

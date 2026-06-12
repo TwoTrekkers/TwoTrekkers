@@ -109,7 +109,7 @@ const routeWhy = (): void => {
 }
 
 const contactClicked = (): void => {
-  const mailto_link = 'mailto:info@twotrekkers.travel?subject=Travel Inquiry&body='
+  const mailto_link = 'mailto:info@twotrekkers.com?subject=Travel Inquiry&body='
   window.location.href = mailto_link
   isOpen.value = false
 }

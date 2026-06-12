@@ -33,7 +33,7 @@
             </li>
             <li>
               <a 
-                href="mailto:info@twotrekkers.travel" 
+                href="mailto:info@twotrekkers.com" 
                 class="footer-link"
               >
                 {{ t('footer.support_team') }}
@@ -54,10 +54,10 @@
           <ul class="space-y-2 text-sm">
             <li>
               <a 
-                href="mailto:info@twotrekkers.travel" 
+                href="mailto:info@twotrekkers.com" 
                 class="footer-link"
               >
-                info@twotrekkers.travel
+                info@twotrekkers.com
               </a>
             </li>
           </ul>

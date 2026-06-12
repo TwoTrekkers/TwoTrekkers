@@ -20,7 +20,7 @@
                 </div>
                 <div class="ml-3">
                   <p class="text-sm font-medium text-gray-900">{{ t('contact.info.email') }}</p>
-                  <p class="text-sm text-gray-600">hello@twotrekkers.travel</p>
+                  <p class="text-sm text-gray-600">hello@twotrekkers.com</p>
                 </div>
               </div>
 
@@ -127,7 +127,7 @@ useHead({
     { name: 'twitter:creator', content: t('meta.twitter.creator') }
   ],
   link: [
-    { rel: 'canonical', href: 'https://twotrekkers.travel/contact' }
+    { rel: 'canonical', href: 'https://twotrekkers.com/contact' }
   ]
 })
 </script>

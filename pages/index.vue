@@ -7,7 +7,7 @@
           <h1 class="text-large">{{ t('home.hero.title') }}</h1>
           <p class="text-small muted mt-4">{{ t('home.hero.subtitle') }}</p>
                   <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="mailto:info@twotrekkers.travel" class="trekker-btn">{{ t('home.hero.cta') }}</a>
+          <a href="mailto:info@twotrekkers.com" class="trekker-btn">{{ t('home.hero.cta') }}</a>
           <NuxtLink :to="localePath('/why')" class="trekker-btn-outline">{{ t('nav.why') }}</NuxtLink>
         </div>
         </div>
@@ -149,7 +149,7 @@
           <h2 class="text-medium">{{ t('home.affiliates.title') }}</h2>
           <p class="text-small muted mt-4">{{ t('home.affiliates.description') }}</p>
           <div class="mt-8">
-            <a href="mailto:info@twotrekkers.travel" class="trekker-btn">Connect Now</a>
+            <a href="mailto:info@twotrekkers.com" class="trekker-btn">Connect Now</a>
           </div>
         </div>
         <div class="flex justify-center" v-scrollanimation="{ threshold: 0.3 }">
@@ -188,7 +188,7 @@ useHead(() => ({
     { name: 'twitter:image', content: 'https://twotrekkers.nyc3.cdn.digitaloceanspaces.com/media/app-images/TwoTrekkersLogo.svg' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://twotrekkers.travel/' }
+    { rel: 'canonical', href: 'https://twotrekkers.com/' }
   ]
 }))
 
